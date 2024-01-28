@@ -174,7 +174,7 @@ void pickup_left()
     pick_down_2();
     delay(100);
 
-    return_to_line_left();
+    // return_to_line_left();
 
     duration_time_diff = millis();
     while (!(millis() - duration_time_diff >= 500))
@@ -216,7 +216,7 @@ void pickup_right()
     pick_down_2();
     delay(100);
 
-    return_to_line_right();
+    // return_to_line_right();
 
     duration_time_diff = millis();
     while (!(millis() - duration_time_diff >= 500))
