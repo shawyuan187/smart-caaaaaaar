@@ -233,6 +233,20 @@ void pick_B()
     forward();
     delay(500);
     trail_cross();
+    return_to_line_left();
+    pick_down();
+    while (!((analogRead(IR[1]) < 450) and (analogRead(IR[2]) < 450) and (analogRead(IR[3]) < 450)))
+    {
+        trail();
+        if (analogRead(IR[1]) < 450 and analogRead(IR[2]) < 450 and analogRead(IR[3]) < 450)
+        {
+            stop();
+            delay(100);
+        }
+    }
+    pick_up();
+    return_to_line_right();
+    trail_cross();
 }
 void pick_C()
 {
